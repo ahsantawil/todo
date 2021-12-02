@@ -1,1 +1,1 @@
-# basic-mongoose
+# todo with mern (mysql, express, react, nodejs)
