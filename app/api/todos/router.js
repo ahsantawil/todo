@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/', function(req, res, next) {
-  res.json({ message: 'Router API'});
+router.get('/todos', function(req, res, next) {
+  res.json({ message: 'Router todos'});
 });
 
 module.exports = router;
