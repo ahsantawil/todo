@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 const todosRouter = require('./app/api/todos/router');
+const itemRouter = require('./app/api/items/router');
 
 const url = '/api/v1';
 
@@ -22,6 +23,7 @@ app.get('/', (req, res) => {
 });
 
 app.use(`${url}`, todosRouter);
+app.use(`${url}`, itemRouter);
 
 app.use(function(req, res, next) {
     const err = new Error('Not Found');

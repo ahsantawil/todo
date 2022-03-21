@@ -1,5 +1,5 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const {getAll, createTodo, getOne, updateTodo, destroy} = require('./controller');
 const { validateCreate, validateOne, validateUpdate } = require('./validation');
 

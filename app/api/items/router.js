@@ -1,11 +1,12 @@
-var express = require('express');
-var router = express.Router();
-const {createItem, getOne, updateItem, destroy} = require('./controller');
-//const { validateCreate, validateOne, validateUpdate } = require('./validation');
+const express = require('express');
+const router = express.Router();
+const { createItem, getOne, updateItem, destroy, move } = require('./controller');
+const { validateCreate, validateOne, validateUpdate, validateMove } = require('./validation');
 
-router.post('/items', createItem);
-router.get('/items/:id', getOne);
-router.put('/items/:id', updateItem);
-router.delete('/items/:id', destroy);
+router.post('/items', validateCreate, createItem);
+router.get('/items/:id', validateOne, getOne);
+router.put('/items/:id', validateUpdate, updateItem);
+router.put('/items/:id/move', validateMove, move);
+router.delete('/items/:id', validateOne, destroy);
 
 module.exports = router;

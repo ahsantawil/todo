@@ -7,7 +7,7 @@ module.exports = {
             const { name, TodoId } = req.body;
             const result = await Item.create({ name, TodoId });
             res.status(201).json({
-                message : 'Add todo success',
+                message : 'Add Items success',
                 data : result,
             });
         } catch (err) {
