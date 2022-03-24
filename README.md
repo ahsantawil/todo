@@ -1,1 +1,1 @@
-# todo with mern (mysql, express, nodejs)
+# todo with mern (mysql, express,react, nodejs)
